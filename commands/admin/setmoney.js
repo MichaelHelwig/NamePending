@@ -1,5 +1,7 @@
 const { SlashCommandBuilder } = require('discord.js');
 
+// WOW I made a commit to test git :)
+
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('setmoney')
