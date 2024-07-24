@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/MichaelHelwig/NamePending#readme",
   "dependencies": {
-    "discord.js": "^14.15.3"
+    "discord.js": "^14.15.3",
+    "oracledb": "^6.5.1",
+    "sequelize": "^6.37.3"
   },
   "devDependencies": {
     "eslint": "^9.7.0"
