@@ -18,7 +18,8 @@
   "homepage": "https://github.com/MichaelHelwig/NamePending#readme",
   "dependencies": {
     "discord.js": "^14.15.3",
-    "oracledb": "^6.5.1",
+    "pg": "^8.12.0",
+    "pg-hstore": "^2.3.4",
     "sequelize": "^6.37.3"
   },
   "devDependencies": {
