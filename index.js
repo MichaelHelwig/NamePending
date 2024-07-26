@@ -1,24 +1,12 @@
 const fs = require('node:fs');
 const path = require('node:path');
-const Sequelize = require('sequelize');
+const db = require('./db.js');
 const { Client, Collection, GatewayIntentBits } = require('discord.js');
-const { token, db_database, db_user, db_password,  db_host, db_dialect} = require('./config.json');
+const { token } = require('./config.json');
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
-//db vars within config.json
-const sequelize = new Sequelize(db_database, db_user, db_password, {
-	host: db_host,
-	dialect: db_dialect,
-	logging: false,
-});
-
-try {
-	sequelize.authenticate();
-	console.log('Connection has been established successfully.');
-  } catch (error) {
-	console.error('Unable to connect to the database:', error);
-  }
+db.db_test_conn();
 
 client.commands = new Collection();
 const foldersPath = path.join(__dirname, 'commands');
